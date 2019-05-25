@@ -25,7 +25,7 @@ function New-TestEnvironment {
     )
 
     if ($RootFolder -like '*:\') {
-        throw "Let's avoid root folders, shall we?"
+        throw "Avoid system root drives"
     }
 
 
@@ -73,7 +73,7 @@ function Remove-TestEnvironment {
     # Write-Host "Root Folder [$script:rootfolder]"
 
     if ($RootFolder -like '*:\') {
-        throw "Don't be that guy. Try specifying a more sensible folder in which to perform a mass deletion, ok?"
+        throw "Avoid system root drives."
     }
 
     foreach ($i in (1..$NumberOfFolders)) {
