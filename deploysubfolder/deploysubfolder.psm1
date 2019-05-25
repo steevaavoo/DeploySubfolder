@@ -25,7 +25,7 @@ function New-TestEnvironment {
     )
 
     if ($RootFolder -like '*:\') {
-        throw "Avoid system root drives"
+        throw "Avoid system root drives."
     }
 
 
